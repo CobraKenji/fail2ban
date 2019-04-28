@@ -1,11 +1,5 @@
 # file: fail2ban/tasks/main.yml
 
-- name: fail2ban | Make sure fail2ban is installed
-  apt:
-    pkg: fail2ban
-    state: latest
-  tags: fail2ban
-
 - name: fail2ban | Make sure the fail2ban configuration is up to date
   template:
     src: etc_fail2ban_fail2ban.conf.j2
